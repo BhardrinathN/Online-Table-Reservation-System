@@ -1,0 +1,215 @@
+/*Navbar (pg-1,step-1)*/
+*{ 
+    margin: 0; 
+    padding: 0; 
+    font-family: "futura md bt"; 
+    text-decoration: none; 
+    list-style: none; 
+    box-sizing: border-box; 
+
+} 
+body { 
+    background: #fff; 
+} 
+/*Code for Image(pg-1,step-2*/
+.arrowimg{
+  display: block;
+  margin: 3% auto;
+}
+@media screen and (max-width: 660px){
+  .arrowimg{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+/*Code for search bar(pg-1,step-3)*/
+.input-box {
+  position: relative;
+  height: 76px;
+  max-width: 67%;
+  width: 100%;
+  background: none;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  border: solid #1f1818;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.input-box i,
+.input-box .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-box i {
+  left: 20%;
+  font-size: 40%;
+  color: #000;
+}
+.input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 110%;
+  font-weight: 400;
+  border: none;
+  padding: 0 30% 0 3%;
+  background-color: transparent;
+}
+.input-box .button {
+  right: 2%;
+  font-size: 100%;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  padding: 1.2% 3%;
+  border-radius: 6px;
+  background-color: #083302;
+  cursor: pointer;
+}
+.input-box .button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .input-box {
+    height: 20%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: auto;
+    overflow: hidden;
+  }
+  .input-box i {
+    left: 10%;
+    font-size: 25px;
+  }
+  .input-box input {
+    padding: 0 30% 0 4%;
+  }
+  .input-box .button {
+    right: 4%;
+    font-size: 14px;
+    padding: 2% 5%;
+  }
+}
+/*Code for Slider (pg-1,step-4)*/
+button{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: none;
+    transition: all .3s ease-in-out;
+}
+.container {
+  height: 22vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.25s ease-in;
+}
+.carousel-view .item-list {
+  max-width: auto;
+  width: 87vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 33px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+.prev-btn {
+  background: none;
+  cursor: pointer;
+}
+.next-btn {
+  cursor: pointer;
+}
+.item {
+  scroll-snap-align: center;
+  min-width: 200px;
+  height: 210px;
+  background-color: deeppink;
+  border-radius:8px;
+}
+@media screen and (max-width: 1280px){
+  .input-box{
+    position: relative;
+  height: 76px;
+  max-width: auto;
+  width: 100%;
+  background: none;
+  margin: 5% 0%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  border: solid #1f1818;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .carousel-view .item-list {
+  max-width: auto;
+  width: 75vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 33px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+}
+@media screen and (max-width: 950px){
+    .container{
+        width:auto;
+        height: auto;
+    }
+    .item{
+        min-width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 700px){
+    .container{
+        width:auto;
+        height: auto;       
+        margin-left:50px;
+        margin-right: 40px;
+    }
+    .item{
+        min-width: 200px;
+        height: 200px;
+        margin-left:50px;
+        margin-right: 40px;
+    }
+    
+  .carousel-view .item-list {
+    max-width: auto;
+    width: 60vw;
+    padding: 50px 10px;
+    display: flex;
+    gap: 33px;
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
+}
